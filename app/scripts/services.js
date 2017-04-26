@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('confusionApp')
+angular.module('galleryApp')
 .constant("baseURL", "https://localhost:3443/")
 .factory('menuFactory', ['$resource', 'baseURL', function ($resource, baseURL) {
 

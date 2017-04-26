@@ -1,11 +1,11 @@
 'use strict';
 
-angular.module('confusionApp')
+angular.module('galleryApp')
 
 .controller('MenuController', ['$scope', 'menuFactory', 'favoriteFactory', function ($scope, menuFactory, favoriteFactory) {
 
     $scope.tab = 1;
-    $scope.filtText = '';
+    $scope.filtText = 'featuredWorks';
     $scope.showDetails = false;
     $scope.showFavorites = false;
     $scope.showMenu = false;
@@ -23,8 +23,9 @@ angular.module('confusionApp')
 
     $scope.select = function (setTab) {
         $scope.tab = setTab;
-
-        if (setTab === 2) {
+        if (setTab === 1) {
+            $scope.filtText = "featuredWorks";
+        } else if (setTab === 2) {
             $scope.filtText = "Paintings";
         } else if (setTab === 3) {
             $scope.filtText = "Calligraphy";
