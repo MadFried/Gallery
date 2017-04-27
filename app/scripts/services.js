@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('galleryApp')
-.constant("baseURL", "https://localhost:3443/")
+.constant("baseURL", "https://morning-basin-54797.herokuapp.com/")
 .factory('menuFactory', ['$resource', 'baseURL', function ($resource, baseURL) {
 
         return $resource(baseURL + "works/:id", null, {
